@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(222, 84%, 5%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(222, 84%, 5%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(222, 84%, 5%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(262, 83%, 58%);
+  --primary-foreground: hsl(0, 0%, 98%);
+  --secondary: hsl(236, 83%, 58%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(179, 95%, 44%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    /* Removed invalid @apply border-border */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans antialiased overflow-x-hidden bg-space-deep text-white;
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-morphism {
+    background: rgba(139, 92, 246, 0.1);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #8b5cf6, #a855f7, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-border {
+    background: linear-gradient(45deg, #8b5cf6, #a855f7, #06b6d4, #ec4899);
+    background-size: 400% 400%;
+    animation: gradient-shift 3s ease infinite;
+  }
+
+  .hologram-text {
+    text-shadow: 0 0 20px currentColor, 0 0 40px currentColor;
+    animation: hologram-flicker 3s ease-in-out infinite;
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes hologram-flicker {
+  0%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0.8; }
+  50% { opacity: 0.9; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.5); }
+  100% { box-shadow: 0 0 40px rgba(139, 92, 246, 0.8); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite alternate;
+}
