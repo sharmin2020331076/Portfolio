@@ -1,5 +1,4 @@
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -7,58 +6,14 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 
 export default function ContactSection() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          ...formData,
-          subject: 'Portfolio Contact Form'
-        }),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        toast({
-          title: "Message sent successfully!",
-          description: "Thank you for reaching out. I'll get back to you soon.",
-        });
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        throw new Error(result.message || 'Failed to send message');
-      }
-    } catch (error) {
-      toast({
-        title: "Error sending message",
-        description: "Please try again later or contact me directly.",
-        variant: "destructive",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value
-    }));
+    toast({
+      title: "Contact form not yet functional",
+      description: "This feature is coming soon!",
+    });
   };
 
   const contactInfo = [
@@ -130,8 +85,6 @@ export default function ContactSection() {
                   type="text"
                   id="name"
                   name="name"
-                  value={formData.name}
-                  onChange={handleChange}
                   required
                   className="bg-slate-800 border-gray-600 text-white placeholder:text-gray-400 focus:border-primary"
                   placeholder="Enter your full name"
@@ -146,8 +99,6 @@ export default function ContactSection() {
                   type="email"
                   id="email"
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
                   required
                   className="bg-slate-800 border-gray-600 text-white placeholder:text-gray-400 focus:border-primary"
                   placeholder="Enter your email address"
@@ -162,8 +113,6 @@ export default function ContactSection() {
                   type="text"
                   id="subject"
                   name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
                   required
                   className="bg-slate-800 border-gray-600 text-white placeholder:text-gray-400 focus:border-primary"
                   placeholder="What's this about?"
@@ -177,8 +126,6 @@ export default function ContactSection() {
                 <Textarea
                   id="message"
                   name="message"
-                  value={formData.message}
-                  onChange={handleChange}
                   required
                   rows={5}
                   className="bg-slate-800 border-gray-600 text-white placeholder:text-gray-400 focus:border-primary resize-none"
@@ -188,20 +135,12 @@ export default function ContactSection() {
 
               <Button
                 type="submit"
-                disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50"
               >
-                {isSubmitting ? (
-                  <div className="flex items-center gap-2">
-                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
-                    Sending...
-                  </div>
-                ) : (
                   <div className="flex items-center gap-2">
                     <span>Send Message</span>
                     <i className="fas fa-paper-plane"></i>
                   </div>
-                )}
               </Button>
             </form>
           </motion.div>
