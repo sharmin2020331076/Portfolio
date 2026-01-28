@@ -1,6 +1,5 @@
 
 import { motion } from 'framer-motion';
-//import juthiPhoto from '@/assets/profile/juthi-photo.jpg';
 
 export default function ProfileSection() {
   return (
@@ -18,7 +17,7 @@ export default function ProfileSection() {
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-2xl rotate-3 opacity-20"></div>
               <div className="glass-morphism rounded-2xl p-2 relative">
                 <img
-                  src="src/assets/profile/juthi-photo.jpg"
+                  src='/juthi-photo.jpg'
                   alt="Sharmin Akther Juthi"
                   className="w-full h-auto rounded-xl object-cover"
                 />
