@@ -38,8 +38,8 @@ export default function AboutSection() {
 
             <div className="grid grid-cols-2 gap-6 mt-8">
               {[
-                { label: "Years Experience", value: "3+" },
-                { label: "Projects Completed", value: "50+" },
+                { label: "Years Experience", value: "1+" },
+                { label: "Projects Completed", value: "5+" },
                 { label: "Technologies Mastered", value: "15+" },
                 { label: "Client Satisfaction", value: "100%" }
               ].map((stat, index) => (

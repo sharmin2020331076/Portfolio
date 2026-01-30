@@ -122,7 +122,7 @@ export default function ContactSection() {
                     name="name"
                     required
                     className="bg-slate-900/50 border-gray-700 text-white focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all duration-300 h-12"
-                    placeholder="John Doe"
+                    placeholder="Your Name"
                     autoComplete='name'
                   />
                 </div>
@@ -137,7 +137,7 @@ export default function ContactSection() {
                     name="email"
                     required
                     className="bg-slate-900/50 border-gray-700 text-white focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all duration-300 h-12"
-                    placeholder="john@example.com"
+                    placeholder="email@example.com"
                     autoComplete='email'
                   />
                 </div>

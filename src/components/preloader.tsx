@@ -18,7 +18,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     'Welcome to the Future!'
   ];
 
-  const name = "SHARMIN AKTHER JUTHI";
+  const name = "SHARMIN AKTHER";
 
   useEffect(() => {
     const timer = setInterval(() => {

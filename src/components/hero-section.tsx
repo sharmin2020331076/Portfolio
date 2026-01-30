@@ -157,7 +157,7 @@ export default function HeroSection() {
 
           {/* Name with 3D effect */}
           <motion.h1
-            className="text-5xl md:text-8xl lg:text-9xl font-bold mb-8 leading-tight relative"
+            className="text-5xl md:text-8xl font-bold mb-8 leading-tight relative"
             initial={{ opacity: 0, scale: 0.8 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: false }}
@@ -170,18 +170,20 @@ export default function HeroSection() {
                 textShadow: '0 0 30px rgba(200, 50, 255, 0.8), 0 0 60px rgba(0, 255, 255, 0.4)'
               }}
             >
-              Sharmin
+              Sharmin Akther
             </motion.div>
             <br />
-            <motion.div
+
+            {/*<motion.div
               className="holographic-text relative inline-block mt-2"
               whileHover={{ scale: 1.05 }}
               style={{
                 textShadow: '0 0 30px rgba(0, 255, 255, 0.8), 0 0 60px rgba(255, 0, 150, 0.4)'
               }}
             >
-              Akther Juthi
-            </motion.div>
+              Akther
+            </motion.div>*/}
+
           </motion.h1>
 
           {/* Professional Title with Matrix Effect */}

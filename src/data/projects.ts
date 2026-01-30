@@ -14,359 +14,442 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'Coffinest',
-    title: 'CoffiNest - Coffee Shop Landing Page',
-    description: 'An elegant, visually immersive coffee e-commerce landing page featuring smooth scrolling, parallax storytelling, product showcases, customer testimonials, and a fully responsive design optimized for all devices.',
-    fullDescription: `# Coffee Shop Landing Page
+    id: 'notesnest',
+    title: 'NotesNest',
+    description: 'A beautiful, modern Progressive Web App for capturing notes and managing tasks.',
+    fullDescription: `# NotesNest
 
-A premium coffee landing page that blends elegant design with immersive storytelling for a seamless shopping experience.
+<div align="center">
+  <img src="\notenest.png" alt="NotesNest Logo" width="100" height="100" />
+  <h3>Your thoughts and tasks, perfectly organized</h3>
+  <p>A beautiful, modern Progressive Web App for capturing notes and managing tasks</p>
+</div>
 
-## Features
+## ✨ Features
 
-- **Advanced Product Filtering**: Multi-level filtering by category, price, brand, and ratings
-- **Real-time Inventory Management**: Live stock updates and availability tracking
-- **Secure Payment Processing**: Integrated with Stripe for secure transactions
-- **User Authentication**: JWT-based authentication with social login options
-- **Responsive Design**: Mobile-first design approach for all devices
-- **Admin Dashboard**: Complete admin panel for product and order management
+### 📝 Notes
+- **Rich Text Editing** - Bold, italic, underline, headings, lists, quotes, code blocks, and more
+- **Smart Organization** - Organize notes with folders and tags for flexible categorization
+- **Full-Text Search** - Instantly find any note with powerful search functionality
+- **Image Attachments** - Add images directly to your notes with preview
+- **Favorites** - Star important notes for quick access
+- **Archive & Trash** - Archive notes or move them to trash with restore capability
+- **Quick Create** - New Note button in notes list header for fast note creation
+- **Auto-save** - Changes are automatically saved with debouncing
 
-## Tech Stack
+### ✅ Tasks (To-Do)
+- **Task Management** - Create, edit, complete, and delete tasks effortlessly
+- **Calendar View** - Visualize your tasks on an interactive calendar with priority indicators
+- **Priority Levels** - Mark tasks as high, medium, or low priority
+- **Categories** - Organize tasks with custom color-coded categories
+- **Smart Views** - Filter tasks by All, Today, Upcoming, Completed, or Calendar
+- **Due Dates** - Set and track due dates for all your tasks
+- **Floating Action Button** - Quick task creation from anywhere
 
-- **Frontend**: React.js, TypeScript, TailwindCSS
-- **Hosting**: Vercel (Frontend)
+### 🚀 Progressive Web App
+- **Installable** - Add to home screen on mobile or install as desktop app
+- **Offline Support** - Full functionality without internet connection via service worker
+- **Fast & Reliable** - Cached assets for instant loading
+- **Custom Icons** - Beautiful branded icons with #C5705D theme color
+- **App Manifest** - Complete PWA configuration with shortcuts
 
-## Installation
+### 🎨 User Experience
+- **Privacy-First** - 100% local storage - your data never leaves your device
+- **Responsive Design** - Optimized for desktop, tablet, and mobile devices
+- **Modern UI** - Clean design with smooth Framer Motion animations and Lenis smooth scrolling
+- **Unified Navigation** - Single header component across notes and todos pages
+- **Settings in Sidebar** - Easy access to app settings, profile, and data management
+- **Error Handling** - Custom error boundary and 404 page for graceful error recovery
+- **Loading States** - Smooth loading indicators for better perceived performance
+- **Social Sharing** - Open Graph and Twitter Card meta tags for rich link previews
 
+## 🛠️ Tech Stack
+
+- **Framework** - [Next.js 16](https://nextjs.org/) with App Router and Turbopack
+- **Language** - TypeScript for type safety
+- **Styling** - [Tailwind CSS v4](https://tailwindcss.com/) with custom oklch color design tokens
+- **Animation** - [Framer Motion](https://www.framer.com/motion/) for smooth transitions and effects
+- **Smooth Scroll** - [Lenis](https://lenis.studiofreight.com/) for buttery smooth scrolling
+- **UI Components** - [shadcn/ui](https://ui.shadcn.com/) (Radix UI primitives + Tailwind)
+- **State Management** - React hooks with localStorage persistence via custom stores
+- **PWA** - Service Worker with offline caching and installable app manifest
+- **Icons** - [Lucide React](https://lucide.dev/) for consistent icon system
+- **Rich Text** - Native contentEditable with document.execCommand
+- **Date Handling** - Native Date objects with custom calendar logic
+
+## 🎨 Design Highlights
+
+### Color Palette
+- **Primary Color**: #C5705D (Warm terracotta) - Used for branding, CTAs, and accents
+- **Background**: Cream with subtle gradients for depth
+- **Shadows**: Layered shadows with primary color tints for elevated elements
+
+### Typography
+- **Font Family**: Geist (sans-serif) for clean, modern readability
+- **Font Mono**: Geist Mono for code blocks and monospace content
+
+### UI Components
+- **Hero Section**: Gradient orbs, trust badges, and screenshot mockup with bordered window
+- **Feature Cards**: Bento grid layout with enhanced visibility, shadows, and hover effects
+- **Footer**: Primary background with newsletter subscription and social links
+- **Navigation**: Unified header across all pages with smooth transitions
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18+ and npm/pnpm installed
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+
+### Installation
+
+1. **Clone the repository**
 \`\`\`bash
-git clone https://github.com/sharmin2020331076/Coffee-Shop-Landing-Page
-cd Coffee-Shop
-npm install
-npm run dev
+git clone <repository-url>
+cd note-web-application
 \`\`\`
 
-## Environment Variables
-
+2. **Install dependencies**
+\`\`\`bash
+npm install
+# or
+pnpm install
 \`\`\`
-MONGODB_URI=your_mongodb_connection_string
-STRIPE_SECRET_KEY=your_stripe_secret_key
-JWT_SECRET=your_jwt_secret
-GOOGLE_CLIENT_ID=your_google_client_id
-\`\`\``,
-    image: '\image.png',
-    technologies: ['React', 'TailwindCSS'],
-    githubUrl: 'https://github.com/sharmin2020331076/Coffee-Shop-Landing-Page',
-    liveUrl: 'https://coffee-shop-landing-page-pi.vercel.app/',
-    category: 'Commercial Website',
-    featured: true
-  },
-  {
-    id: 'taskflow',
-    title: 'TaskFlow - Project Management',
-    description: 'Collaborative task management with real-time updates, drag-and-drop functionality, and team collaboration features. Inspired by modern productivity tools.',
-    fullDescription: `# TaskFlow - Project Management Tool
 
-A powerful project management application designed for teams to collaborate effectively and track project progress in real-time.
+3. **Run the development server**
+\`\`\`bash
+npm run dev
+# or
+pnpm dev
+\`\`\`
 
-## Key Features
+4. **Open in browser**
+Navigate to [http://localhost:3000](http://localhost:3000)
 
-- **Drag & Drop Interface**: Intuitive Kanban boards with smooth drag-and-drop functionality
-- **Real-time Collaboration**: Live updates using WebSocket connections
-- **Team Management**: User roles, permissions, and team organization
-- **Time Tracking**: Built-in time tracking for tasks and projects
-- **File Attachments**: Upload and manage project files
-- **Notifications**: Real-time notifications for task updates and mentions
+5. **Install as PWA** (Optional)
+- Click the install icon in your browser's address bar
+- Or use "Add to Home Screen" on mobile devices
 
-## Architecture
-
-- **Frontend**: React.js with TypeScript for type safety
-- **State Management**: Redux Toolkit for complex state management
-- **Real-time**: Socket.io for live collaboration features
-- **Backend**: Node.js with Express.js REST API
-- **Database**: PostgreSQL with Prisma ORM
-- **File Storage**: AWS S3 for file attachments
-
-## Getting Started
+### Build for Production
 
 \`\`\`bash
-# Clone the repository
-git clone https://github.com/yourusername/taskflow
-cd taskflow
+npm run build
+npm start
+\`\`\`
 
-# Install dependencies
-npm install
+### Project Structure
 
-# Setup database
-npx prisma migrate dev
+\`\`\`
+note-web-application/
+├── app/
+│   ├── page.tsx              # Homepage with hero, features, and footer
+│   ├── layout.tsx            # Root layout with PWA meta tags
+│   ├── loading.tsx           # Global loading state
+│   ├── error.tsx             # Error boundary component
+│   ├── not-found.tsx         # Custom 404 page
+│   ├── globals.css           # Global styles with design tokens
+│   ├── notes/
+│   │   └── page.tsx          # Notes application page
+│   └── todos/
+│       └── page.tsx          # Tasks/To-Do application page
+├── components/
+│   ├── global-nav.tsx        # Navigation between Home/Notes/Todos
+│   ├── unified-header.tsx    # Unified header for notes and todos
+│   ├── pwa-installer.tsx     # Client-side PWA service worker registration
+│   ├── theme-provider.tsx    # Theme context provider
+│   ├── quickquill/           # Notes-specific components
+│   │   ├── sidebar.tsx       # Notes sidebar with settings
+│   │   ├── notes-list.tsx    # Notes list with create button
+│   │   └── note-editor.tsx   # Rich text note editor
+│   ├── todos/                # Tasks-specific components
+│   │   ├── todo-sidebar.tsx  # Tasks sidebar with settings
+│   │   ├── todo-list.tsx     # Tasks list
+│   │   └── todo-calendar.tsx # Calendar view for tasks
+│   └── ui/                   # Reusable shadcn/ui components
+├── hooks/
+│   ├── use-notes-store.tsx   # Notes state and localStorage
+│   └── use-todos-store.tsx   # Tasks state and localStorage
+├── lib/
+│   ├── types.ts              # TypeScript interfaces
+│   └── utils.ts              # Utility functions (cn, etc.)
+└── public/
+    ├── manifest.json         # PWA manifest configuration
+    ├── sw.js                 # Service worker for offline support
+    ├── offline.html          # Offline fallback page
+    ├── icon.svg              # Favicon and app icon
+    ├── icon-maskable.svg     # Maskable PWA icon
+    └── note-preview.jpg      # Homepage preview image
+\`\`\`
 
-# Start development server
-npm run dev
-\`\`\``,
-    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
-    technologies: ['React', 'TypeScript', 'Firebase', 'Socket.io', 'PostgreSQL'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
+## 📱 Key Features Explained
+
+### Progressive Web App (PWA)
+
+NotesNest is a fully installable Progressive Web App with:
+- **Service Worker**: Caches all assets for offline functionality
+- **App Manifest**: Configured with app name, icons, theme colors, and shortcuts
+- **Install Prompt**: Browser-native install prompt for adding to home screen
+- **Offline Support**: Full app functionality without internet connection
+- **Fast Loading**: Instant startup from cached resources
+
+### Responsive Design
+
+- **Mobile (< 768px)**: Single column layout with slide-out sidebar
+- **Tablet (768px - 1023px)**: Two-column layout with collapsible sidebar
+- **Desktop (1024px+)**: Three-column layout - sidebar, list, and editor visible simultaneously
+
+### Data Persistence & Privacy
+
+All data is stored in browser localStorage with:
+- **Zero Cloud Sync**: Your data never leaves your device
+- **No Tracking**: No analytics, cookies, or third-party scripts
+- **Instant Access**: No login required, no accounts to create
+- **Export/Import**: Full data export and import capabilities in settings
+- **Data Structure**: Organized JSON format in localStorage with separate stores for notes and tasks
+
+### Rich Text Editing
+
+The note editor supports:
+- Text formatting (bold, italic, underline, strikethrough)
+- Structural elements (headings H1-H3, lists, blockquotes, code blocks)
+- Text alignment (left, center, right, justify)
+- Link insertion with URL dialog
+- Image insertion from file upload with inline preview
+- Undo/Redo functionality
+
+### Auto-save Mechanism
+
+- **1-second debounce** to avoid excessive saving during typing
+- **Silent background saving** with no interruption to workflow
+- **Immediate localStorage** persistence for data safety
+- **Visual feedback** with "Saved" indicator
+
+### Settings & Customization
+
+Accessible from sidebar on both notes and todos pages:
+- **Profile Management**: Set display name and avatar
+- **Theme Selection**: Choose app color scheme
+- **Font Size**: Adjust editor font size (Small, Medium, Large)
+- **Auto-save Toggle**: Enable/disable auto-save
+- **Data Management**: Export all data as JSON or import from backup
+
+## 🎨 Customization
+
+### Color Scheme
+
+The app uses oklch color space design tokens in \`app/globals.css\`. Customize by modifying:
+
+\`\`\`css
+:root {
+  --primary: oklch(0.58 0.12 35);      /* #C5705D - Warm terracotta */
+  --background: oklch(0.985 0.005 60); /* Cream background */
+  --foreground: oklch(0.25 0.02 30);   /* Dark text */
+  /* ... more tokens ... */
+}
+\`\`\`
+
+The primary color (#C5705D) is used throughout:
+- Branding (logo, icons)
+- Call-to-action buttons
+- Active states and highlights
+- Footer background
+- PWA theme color
+
+### Typography
+
+Configured in \`app/layout.tsx\` using Google Fonts:
+\`\`\`typescript
+const geist = Geist({ subsets: ["latin"] });
+const geistMono = Geist_Mono({ subsets: ["latin"] });
+\`\`\`
+
+### Adding Custom Features
+
+1. **New Note Actions**: Extend \`hooks/use-notes-store.tsx\`
+2. **New Task Filters**: Modify \`hooks/use-todos-store.tsx\`
+3. **UI Components**: Add to \`components/ui/\` following shadcn patterns
+4. **Animations**: Use Framer Motion variants in component files
+
+## 🌐 Browser Support
+
+Works on all modern browsers supporting:
+- ✅ ES2020+ JavaScript
+- ✅ CSS Grid and Flexbox
+- ✅ localStorage API
+- ✅ contentEditable
+- ✅ File API
+- ✅ Service Workers (for PWA)
+- ✅ Web App Manifest
+
+**Tested on:**
+- Chrome 120+
+- Firefox 121+
+- Safari 17+
+- Edge 120+
+
+## 📊 Performance
+
+- **Lighthouse Score**: 95+ across all metrics
+- **First Contentful Paint**: < 1.5s
+- **Time to Interactive**: < 2.5s
+- **Smooth Scrolling**: Lenis for 60fps scrolling
+- **Optimized Images**: SVG icons for scalability
+- **Code Splitting**: Automatic with Next.js App Router
+
+## 🔮 Future Enhancements
+
+Planned features for future versions:
+- [ ] Cloud sync with end-to-end encryption
+- [ ] User authentication (optional)
+- [ ] Real-time collaboration on notes
+- [ ] Native mobile apps (iOS/Android)
+- [ ] Advanced search with filters and operators
+- [ ] Note templates and snippets
+- [ ] Markdown export
+- [ ] Voice notes and audio attachments
+- [ ] Kanban board view for tasks
+- [ ] Time tracking for tasks
+- [ ] Pomodoro timer integration
+- [ ] Browser extension for quick capture
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how you can help:
+
+1. **Report Bugs**: Open an issue with detailed reproduction steps
+2. **Suggest Features**: Share your ideas in the discussions
+3. **Submit PRs**: Fork the repo and submit pull requests
+4. **Improve Docs**: Help make the documentation better
+5. **Share Feedback**: Let us know how you're using NotesNest
+
+### Development Guidelines
+
+- Follow the existing code style and conventions
+- Write meaningful commit messages
+- Test thoroughly before submitting PRs
+- Update documentation for new features
+- Keep accessibility in mind
+
+## 💬 Support
+
+- **Issues**: [GitHub Issues](https://github.com/yourusername/notesnest/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yourusername/notesnest/discussions)
+- **Email**: Contact through NotesNest homepage
+
+## 🙏 Acknowledgments
+
+Built with these amazing tools:
+- [Next.js](https://nextjs.org/) - React framework
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS
+- [Framer Motion](https://www.framer.com/motion/) - Animation library
+- [shadcn/ui](https://ui.shadcn.com/) - UI component library
+- [Lucide](https://lucide.dev/) - Icon library
+- [Lenis](https://lenis.studiofreight.com/) - Smooth scroll
+
+## 📸 Screenshots
+
+### Homepage
+Modern landing page with feature showcases, trust badges, and newsletter signup.
+
+### Notes App
+Clean interface for capturing and organizing your thoughts with rich text formatting.
+
+### Tasks App
+Calendar view and list view for managing your tasks with priorities and categories.
+
+---
+
+<div align="center">
+  <p><strong>Built with ❤️ for your productivity</strong></p>
+  <p>100% Private • Offline First • Zero Setup</p>
+</div>`,
+    image: '/notenest.png',
+    technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'shadcn/ui'],
+    githubUrl: 'https://github.com/sharmin2020331076/NoteNest',
+    liveUrl: '#',
     category: 'Productivity',
     featured: true
   },
   {
-    id: 'weathervue',
-    title: 'WeatherVue - Smart Dashboard',
-    description: 'Intelligent weather dashboard with location-based forecasts, interactive charts, and beautiful animations that reflect current weather conditions.',
-    fullDescription: `# WeatherVue - Smart Weather Dashboard
+    id: 'coffinest',
+    title: 'Coffee Shop Landing Page ☕',
+    description: 'A modern and responsive coffee shop landing page built with React, TypeScript, and Vite.',
+    fullDescription: `# Coffee Shop Landing Page ☕
 
-An intelligent weather application that provides comprehensive weather information with beautiful visualizations and animations.
+A modern and responsive coffee shop landing page built with React, TypeScript, and Vite. It showcases a fictional coffee brand with sections like hero, menu, about, and contact.
 
 ## Features
+- **Responsive layout** for desktop and mobile screens.
+- **Built with React + TypeScript + Vite** for fast development and HMR.
+- **Modular component structure** for easy customization.
+- **CSS styling** for typography, layout, and coffee-themed visuals.
 
-- **Location-based Forecasts**: Automatic location detection with manual search capability
-- **Interactive Charts**: Beautiful weather data visualization using Chart.js
-- **Animated Weather Icons**: Dynamic icons that change based on weather conditions
-- **7-day Forecast**: Extended weather predictions with hourly breakdowns
-- **Weather Alerts**: Push notifications for severe weather conditions
-- **Offline Support**: PWA with offline caching for last viewed locations
+## Tech Stack
+- React
+- TypeScript
+- Vite
+- CSS
+- ESLint (with TypeScript setup)
 
-## APIs Used
+## Getting Started
 
-- **OpenWeatherMap API**: Primary weather data source
-- **Geolocation API**: Browser location detection
-- **Mapbox API**: Location search and mapping
+### Clone the repository
+\`\`\`bash
+git clone https://github.com/sharmin2020331076/Coffee-Shop-Landing-Page.git
+cd Coffee-Shop-Landing-Page
+\`\`\`
 
-## Technical Implementation
-
-- **Frontend Framework**: Vue.js 3 with Composition API
-- **State Management**: Pinia for reactive state management
-- **Charts**: Chart.js for weather data visualization
-- **Animations**: CSS3 and Vue transitions
-- **PWA**: Service workers for offline functionality
-- **Build Tool**: Vite for fast development and building
-
-## Setup
-
+### Install dependencies
 \`\`\`bash
 npm install
+\`\`\`
+
+### Run the development server
+\`\`\`bash
 npm run dev
 \`\`\`
 
-## API Keys Required
+The app will be available at http://localhost:5173
 
-- OpenWeatherMap API key
-- Mapbox access token`,
-    image: 'https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
-    technologies: ['Vue.js', 'Weather API', 'Chart.js', 'PWA'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
-    category: 'Dashboard',
-    featured: true
-  },
-  {
-    id: 'socialpulse',
-    title: 'SocialPulse - Analytics Dashboard',
-    description: 'Comprehensive social media analytics platform with real-time data visualization, engagement tracking, and automated reporting features.',
-    fullDescription: `# SocialPulse - Social Media Analytics
+## Available Scripts
+- \`npm run dev\`: Start the Vite dev server with HMR.
+- \`npm run build\`: Create a production build.
+- \`npm run preview\`: Preview the production build locally.
+- \`npm run lint\`: Run ESLint checks.
 
-A comprehensive analytics platform for social media managers to track, analyze, and optimize their social media performance across multiple platforms.
+## Project Structure
+\`\`\`
+.
+├─ public/       # Static assets
+├─ src/          # React components and app logic
+├─ index.html    # Root HTML template
+├─ package.json  # Scripts and dependencies
+├─ tsconfig.json # TypeScript configuration
+├─ vite.config.ts # Vite configuration
+└─ eslint.config.js # ESLint configuration
+\`\`\`
 
-## Core Features
-
-- **Multi-Platform Integration**: Connect Instagram, Twitter, Facebook, LinkedIn
-- **Real-time Analytics**: Live data streaming and visualization
-- **Engagement Tracking**: Monitor likes, comments, shares, and reach
-- **Automated Reporting**: Generate PDF reports with insights
-- **Content Scheduling**: Plan and schedule posts across platforms
-- **Competitor Analysis**: Track competitor performance and trends
-
-## Data Visualization
-
-- **Interactive Dashboards**: D3.js powered charts and graphs
-- **Custom Metrics**: Create custom KPIs and tracking metrics
-- **Export Options**: CSV, PDF, and JSON data export
-- **Historical Data**: Track performance trends over time
-
-## Technology Stack
-
-- **Frontend**: React.js with TypeScript
-- **Data Visualization**: D3.js and Recharts
-- **Backend**: Express.js with Node.js
-- **Database**: MongoDB for analytics data
-- **Authentication**: OAuth integration with social platforms
-- **Scheduling**: Node-cron for automated tasks
-
-## Installation
+## Deployment
+The project is configured to be deployable via static hosting (GitHub Pages, Vercel, Netlify) using the Vite build output.
 
 \`\`\`bash
-git clone https://github.com/yourusername/socialpulse
-cd socialpulse
-npm install
 npm run build
-npm start
-\`\`\``,
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
-    technologies: ['React', 'D3.js', 'Express', 'MongoDB', 'OAuth'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
-    category: 'Analytics',
+\`\`\`
+
+## Future Improvements
+- Add animations and micro-interactions for a richer UX.
+- Integrate a simple cart or ordering form.
+- Enhance accessibility and keyboard navigation support.`,
+    image: '/coffinest.png',
+    technologies: ['React', 'TypeScript', 'Vite', 'CSS'],
+    githubUrl: 'https://github.com/sharmin2020331076/Coffee-Shop-Landing-Page',
+    liveUrl: 'https://coffee-shop-landing-page-pi.vercel.app/',
+    category: 'Commercial Website',
     featured: true
-  },
-  {
-    id: 'cryptotracker',
-    title: 'CryptoTracker - Investment Portfolio',
-    description: 'Real-time cryptocurrency portfolio tracker with advanced analytics, price alerts, and market insights for informed trading decisions.',
-    fullDescription: `# CryptoTracker - Investment Portfolio
-
-A sophisticated cryptocurrency portfolio management application with real-time price tracking, advanced analytics, and trading insights.
-
-## Features
-
-- **Real-time Price Tracking**: Live cryptocurrency prices and market data
-- **Portfolio Management**: Track holdings, profits, and losses
-- **Price Alerts**: Custom alerts for price movements
-- **Market Analysis**: Technical indicators and chart analysis
-- **News Integration**: Latest crypto news and market updates
-- **Tax Reporting**: Generate reports for tax purposes
-
-## Market Data
-
-- **CoinGecko API**: Comprehensive cryptocurrency data
-- **WebSocket Connections**: Real-time price updates
-- **Historical Data**: Price charts and historical analysis
-- **Market Metrics**: Market cap, volume, and price changes
-
-## Tech Stack
-
-- **Frontend**: Next.js with TypeScript
-- **Styling**: TailwindCSS with Headless UI
-- **Charts**: TradingView widgets and Chart.js
-- **State**: Zustand for state management
-- **API**: CoinGecko and CryptoCompare APIs
-- **Database**: Supabase for user data`,
-    image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
-    technologies: ['Next.js', 'TypeScript', 'TailwindCSS', 'Supabase'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
-    category: 'Finance',
-    featured: false
-  },
-  {
-    id: 'recipeai',
-    title: 'RecipeAI - Smart Cooking Assistant',
-    description: 'AI-powered recipe recommendation system that suggests personalized recipes based on available ingredients and dietary preferences.',
-    fullDescription: `# RecipeAI - Smart Cooking Assistant
-
-An intelligent cooking assistant that uses AI to recommend recipes based on your available ingredients, dietary restrictions, and personal preferences.
-
-## AI Features
-
-- **Ingredient Recognition**: Camera-based ingredient detection
-- **Recipe Generation**: AI-powered recipe creation
-- **Nutrition Analysis**: Detailed nutritional information
-- **Dietary Preferences**: Vegan, keto, gluten-free options
-- **Smart Substitutions**: Ingredient substitution suggestions
-- **Cooking Timer**: Integrated cooking timers and steps
-
-## Technology
-
-- **AI/ML**: OpenAI GPT-4 for recipe generation
-- **Computer Vision**: TensorFlow.js for ingredient recognition
-- **Frontend**: React Native for mobile app
-- **Backend**: Python Flask with ML models
-- **Database**: PostgreSQL for recipe storage
-- **APIs**: Spoonacular API for recipe data
-
-## Mobile Features
-
-- **Camera Integration**: Take photos of ingredients
-- **Voice Commands**: Voice-controlled cooking assistant
-- **Offline Mode**: Download recipes for offline cooking
-- **Shopping Lists**: Generate shopping lists from recipes
-- **Social Sharing**: Share recipes with friends`,
-    image: 'https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
-    technologies: ['React Native', 'Python', 'TensorFlow', 'OpenAI', 'PostgreSQL'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
-    category: 'AI/ML',
-    featured: false
-  },
-  {
-    id: 'gamestore',
-    title: 'GameStore - Digital Marketplace',
-    description: 'Modern digital game marketplace with user reviews, wishlists, and secure payment processing for indie and AAA game developers.',
-    fullDescription: `# GameStore - Digital Game Marketplace
-
-A comprehensive digital marketplace for game developers to sell their games and for gamers to discover, purchase, and manage their game libraries.
-
-## Platform Features
-
-- **Game Library**: Personal game collection management
-- **User Reviews**: Community-driven game reviews and ratings
-- **Wishlist System**: Save games for later purchase
-- **Digital Downloads**: Secure game download and installation
-- **Developer Dashboard**: Analytics and sales tracking for developers
-- **Community Features**: Forums, discussions, and user profiles
-
-## E-commerce
-
-- **Secure Payments**: Stripe integration for payments
-- **Regional Pricing**: Currency conversion and regional pricing
-- **Refund System**: Automated refund processing
-- **Sales & Discounts**: Promotional campaigns and discounts
-- **Gift System**: Send games as gifts to friends
-
-## Technical Architecture
-
-- **Frontend**: Vue.js 3 with Nuxt.js for SSR
-- **Backend**: Node.js with Express and GraphQL
-- **Database**: MongoDB for product data, Redis for caching
-- **File Storage**: AWS S3 for game files and assets
-- **CDN**: CloudFront for global content delivery
-- **Security**: JWT authentication with rate limiting`,
-    image: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
-    technologies: ['Vue.js', 'Nuxt.js', 'GraphQL', 'MongoDB', 'AWS'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
-    category: 'E-Commerce',
-    featured: false
-  },
-  {
-    id: 'fitnesstracker',
-    title: 'FitnessTracker - Health & Wellness',
-    description: 'Comprehensive fitness tracking application with workout plans, nutrition tracking, and progress analytics for health-conscious users.',
-    fullDescription: `# FitnessTracker - Health & Wellness Platform
-
-A complete fitness and health tracking application designed to help users achieve their fitness goals through comprehensive tracking and personalized recommendations.
-
-## Health Features
-
-- **Workout Tracking**: Log exercises, sets, reps, and weights
-- **Nutrition Logging**: Track calories, macros, and meal planning
-- **Progress Analytics**: Visual progress charts and statistics
-- **Goal Setting**: Set and track fitness goals
-- **Workout Plans**: Pre-built and custom workout routines
-- **Integration**: Connect with fitness wearables and apps
-
-## Personalization
-
-- **AI Recommendations**: Personalized workout and nutrition suggestions
-- **Progress Photos**: Before/after photo comparisons
-- **Social Features**: Share progress with friends and community
-- **Challenges**: Fitness challenges and leaderboards
-- **Coach Integration**: Connect with personal trainers
-
-## Technology Stack
-
-- **Mobile App**: React Native for cross-platform mobile
-- **Web Dashboard**: React.js for detailed analytics
-- **Backend**: Node.js with Express.js
-- **Database**: PostgreSQL for user data
-- **Analytics**: Custom analytics engine
-- **Integrations**: Apple Health, Google Fit, Fitbit APIs`,
-    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
-    technologies: ['React Native', 'React', 'Node.js', 'PostgreSQL'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
-    category: 'Health',
-    featured: false
-  }
-];
+  }];
 
 export const getFeaturedProjects = () => projects.filter(project => project.featured);
 export const getAllProjects = () => projects;

@@ -4,24 +4,24 @@ import { motion } from 'framer-motion';
 export default function TestimonialsSection() {
   const testimonials = [
     {
-      name: "Sarah Johnson",
+      name: "Farhana Khan",
       role: "Product Manager",
       company: "TechCorp",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b612b665?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKFvhF3wIMkCEJ_8y7t6QcvUBdfgGa13_o0Q&s",
       content: "Juthi's attention to detail and innovative approach to problem-solving made our project a huge success. Her technical skills are matched only by her professionalism."
     },
     {
-      name: "Michael Chen",
+      name: "Rahim Ahmed",
       role: "Senior Developer",
       company: "InnovateLab",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwL7fw_6Kl-9YcXUY8ucphfb3uYkJQd2Z2kA&s",
       content: "Working with Juthi was fantastic. She delivered exceptional code quality and her communication throughout the project was outstanding. Highly recommended!"
     },
     {
-      name: "Emily Rodriguez",
+      name: "Tanvir Hasan",
       role: "UI/UX Designer",
       company: "DesignStudio",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&h=150",
+      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=150&h=150",
       content: "Juthi perfectly translated our designs into beautiful, responsive applications. Her understanding of both design and development is truly impressive."
     }
   ];
