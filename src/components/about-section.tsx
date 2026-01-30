@@ -27,17 +27,13 @@ export default function AboutSection() {
             className="space-y-6"
           >
             <p className="text-lg text-gray-300 leading-relaxed">
-              I'm Sharmin Akther Juthi, a passionate Computer Science student and web developer 
-              with a keen eye for creating beautiful, functional digital experiences. My journey 
-              in technology began with curiosity and has evolved into a deep love for crafting 
-              innovative solutions.
+              I'm Sharmin Akther Juthi, a passionate Computer Science student and frontend developer dedicated to crafting beautiful, intuitive digital experiences that feel as good as they look.
+
             </p>
             
             <p className="text-lg text-gray-300 leading-relaxed">
-              With expertise in modern web technologies, I specialize in building responsive, 
-              user-centric applications that not only look stunning but also deliver exceptional 
-              performance. I believe in the power of clean code, thoughtful design, and 
-              continuous learning.
+              I specialize in modern frontend technologies to build responsive, user-centric interfaces that are visually stunning, accessible, and highly performant across devices.
+
             </p>
 
             <div className="grid grid-cols-2 gap-6 mt-8">
@@ -77,10 +73,10 @@ export default function AboutSection() {
               
               <div className="space-y-4">
                 {[
-                  "🚀 Innovation-driven development",
-                  "🎨 User-centered design approach",
-                  "⚡ Performance optimization expert",
-                  "🔧 Problem-solving enthusiast"
+                  "🚀 Modern frontend development",
+                  "🎨 Pixel-perfect, responsive UI design",
+                  "⚡ Performance & optimization focused",
+                  "🔧 Problem-solving with clean, maintainable code"
                 ].map((item, index) => (
                   <motion.div
                     key={index}

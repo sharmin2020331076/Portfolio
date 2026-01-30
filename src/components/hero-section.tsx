@@ -194,7 +194,7 @@ export default function HeroSection() {
           >
             <div className="cyber-border p-4 rounded-lg inline-block">
               <span className="text-neon-cyan">&lt;</span>
-              <span className="text-white mx-2">Full Stack Developer</span>
+              <span className="text-white mx-2">Frontend Developer</span>
               <span className="text-neon-cyan">/&gt;</span>
             </div>
           </motion.div>
@@ -206,8 +206,8 @@ export default function HeroSection() {
             whileInView={{ opacity: 1 }}
             viewport={{ once: false }}
             transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            Pushing the boundaries of web development with cutting-edge technologies.
+          > 
+            Pushing the boundaries of frontend development with cutting-edge technologies.
             Transforming ideas into immersive digital realities through innovation and creativity.
           </motion.p>
 

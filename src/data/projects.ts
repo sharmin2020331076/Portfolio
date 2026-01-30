@@ -14,12 +14,12 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: 'shopsphere',
-    title: 'ShopSphere - E-Commerce Platform',
-    description: 'A modern e-commerce platform with advanced filtering, real-time inventory, and seamless checkout experience. Built with React.js and integrated payment processing.',
-    fullDescription: `# ShopSphere - E-Commerce Platform
+    id: 'Coffinest',
+    title: 'CoffiNest - Coffee Shop Landing Page',
+    description: 'An elegant, visually immersive coffee e-commerce landing page featuring smooth scrolling, parallax storytelling, product showcases, customer testimonials, and a fully responsive design optimized for all devices.',
+    fullDescription: `# Coffee Shop Landing Page
 
-A comprehensive e-commerce solution built with modern web technologies, providing users with a seamless shopping experience.
+A premium coffee landing page that blends elegant design with immersive storytelling for a seamless shopping experience.
 
 ## Features
 
@@ -33,17 +33,13 @@ A comprehensive e-commerce solution built with modern web technologies, providin
 ## Tech Stack
 
 - **Frontend**: React.js, TypeScript, TailwindCSS
-- **Backend**: Node.js, Express.js
-- **Database**: MongoDB with Mongoose
-- **Payment**: Stripe API
-- **Authentication**: JWT, Google OAuth
-- **Hosting**: Vercel (Frontend), Railway (Backend)
+- **Hosting**: Vercel (Frontend)
 
 ## Installation
 
 \`\`\`bash
-git clone https://github.com/yourusername/shopsphere
-cd shopsphere
+git clone https://github.com/sharmin2020331076/Coffee-Shop-Landing-Page
+cd Coffee-Shop
 npm install
 npm run dev
 \`\`\`
@@ -56,11 +52,11 @@ STRIPE_SECRET_KEY=your_stripe_secret_key
 JWT_SECRET=your_jwt_secret
 GOOGLE_CLIENT_ID=your_google_client_id
 \`\`\``,
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400',
-    technologies: ['React', 'TailwindCSS', 'Node.js', 'MongoDB', 'Stripe'],
-    githubUrl: 'https://github.com',
-    liveUrl: 'https://example.com',
-    category: 'E-Commerce',
+    image: '\image.png',
+    technologies: ['React', 'TailwindCSS'],
+    githubUrl: 'https://github.com/sharmin2020331076/Coffee-Shop-Landing-Page',
+    liveUrl: 'https://coffee-shop-landing-page-pi.vercel.app/',
+    category: 'Commercial Website',
     featured: true
   },
   {

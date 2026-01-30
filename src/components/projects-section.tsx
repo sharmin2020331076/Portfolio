@@ -19,12 +19,12 @@ export default function ProjectsSection() {
             Featured Projects
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            A showcase of my latest work, featuring innovative solutions and creative approaches to complex challenges.
+            A showcase of my latest work, featuring innovative designs and creative approaches to best user interface implementations.
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
           {featuredProjects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -119,7 +119,7 @@ export default function ProjectsSection() {
             <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
           </motion.a>
         </motion.div>
-      </div>
-    </section>
+      </div >
+    </section >
   );
 }

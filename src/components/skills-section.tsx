@@ -15,27 +15,15 @@ export default function SkillsSection() {
         { name: "HTML5/CSS3", level: 96 }
       ]
     },
-    {
-      title: "Backend",
-      icon: "fas fa-server",
-      skills: [
-        { name: "Node.js", level: 87 },
-        { name: "Express.js", level: 85 },
-        { name: "Python", level: 82 },
-        { name: "PostgreSQL", level: 80 },
-        { name: "MongoDB", level: 78 },
-        { name: "REST APIs", level: 90 }
-      ]
-    },
+   
     {
       title: "Tools & Others",
       icon: "fas fa-tools",
       skills: [
         { name: "Git/GitHub", level: 93 },
-        { name: "Docker", level: 75 },
         { name: "AWS", level: 70 },
         { name: "Figma", level: 88 },
-        { name: "Firebase", level: 82 },
+        { name: "VS Code", level: 82 },
         { name: "Vercel", level: 85 }
       ]
     }
@@ -60,7 +48,7 @@ export default function SkillsSection() {
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto mt-6"></div>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <motion.div
               key={categoryIndex}
@@ -127,9 +115,8 @@ export default function SkillsSection() {
           <h3 className="text-2xl font-bold text-gradient mb-8">Additional Proficiencies</h3>
           <div className="flex flex-wrap justify-center gap-4">
             {[
-              "Responsive Design", "Cross-browser Compatibility", "Performance Optimization",
-              "SEO Best Practices", "Agile Methodologies", "Team Collaboration",
-              "Problem Solving", "Code Review", "Testing & Debugging"
+              "Responsive Design", "Team Collaboration",
+              "Problem Solving", "Code Review", "Testing & Debugging", "C/C++/Java/Python", "DSA"
             ].map((skill, index) => (
               <motion.span
                 key={index}

@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -8,20 +9,53 @@ import { useToast } from '@/hooks/use-toast';
 export default function ContactSection() {
   const { toast } = useToast();
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Contact form not yet functional",
-      description: "This feature is coming soon!",
-    });
+    setIsSubmitting(true);
+
+    const formData = new FormData(e.target as HTMLFormElement);
+    const data = Object.fromEntries(formData);
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/sharminjuthi1080@gmail.com", {
+        method: "POST",
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        toast({
+          title: "Message sent successfully!",
+          description: "I'll get back to you as soon as possible.",
+        });
+        (e.target as HTMLFormElement).reset();
+      } else {
+        throw new Error(result.message || "Something went wrong");
+      }
+    } catch (error) {
+      toast({
+        title: "Error sending message",
+        description: "Please try again or email me directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
     {
       icon: "fas fa-envelope",
       title: "Email",
-      value: "sharminjuthi1080@example.com",
-      link: "mailto:sharminjuthi1080@example.com"
+      value: "sharminjuthi1080@gmail.com",
+      link: "mailto:sharminjuthi1080@gmail.com"
     },
     {
       icon: "fas fa-phone",
@@ -38,18 +72,18 @@ export default function ContactSection() {
   ];
 
   const socialLinks = [
-    { icon: "fab fa-github", href: "https://github.com", label: "GitHub" },
-    { icon: "fab fa-linkedin", href: "https://linkedin.com", label: "LinkedIn" },
+    { icon: "fab fa-github", href: "https://github.com/sharmin2020331076", label: "GitHub" },
+    { icon: "fab fa-linkedin", href: "https://www.linkedin.com/in/sharmin-akther-juthi/", label: "LinkedIn" },
     { icon: "fab fa-twitter", href: "https://twitter.com", label: "Twitter" },
-    { icon: "fab fa-instagram", href: "https://instagram.com", label: "Instagram" },
-    { icon: "fab fa-facebook", href: "https://facebook.com", label: "Instagram" }
+    { icon: "fab fa-instagram", href: "https://www.instagram.com/__sharminjuthi__/", label: "Instagram" },
+    { icon: "fab fa-facebook", href: "https://www.facebook.com/sharmin.akther.juthi.2025", label: "Facebook" }
   ];
 
   return (
     <section id="contact" className="py-20 bg-slate-deep">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
-          initial={{ opacity: 0, y: 50 }} 
+          initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
@@ -66,8 +100,8 @@ export default function ContactSection() {
 
         <div className="flex lg:flex-row flex-col space-y-10 lg:space-x-12 space-x-0 lg:space-y-0 items-center justify-center">
           {/* Contact Form */}
-          
-            <motion.div
+
+          <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
@@ -75,38 +109,42 @@ export default function ContactSection() {
             className="glass-morphism p-8 rounded-2xl lg:w-1/2 w-full"
           >
             <h3 className="text-2xl font-bold text-gradient mb-6">Send Message</h3>
-            
+
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                  Full Name
-                </label>
-                <Input
-                  type="text"
-                  id="name"
-                  name="name"
-                  required
-                  className="bg-slate-800 border-gray-600 text-white placeholder:text-gray-400 focus:border-primary"
-                  placeholder="Enter your full name"
-                />
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="group">
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-primary transition-colors">
+                    Full Name
+                  </label>
+                  <Input
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                    className="bg-slate-900/50 border-gray-700 text-white focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all duration-300 h-12"
+                    placeholder="John Doe"
+                    autoComplete='name'
+                  />
+                </div>
+
+                <div className="group">
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-primary transition-colors">
+                    Email Address
+                  </label>
+                  <Input
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                    className="bg-slate-900/50 border-gray-700 text-white focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all duration-300 h-12"
+                    placeholder="john@example.com"
+                    autoComplete='email'
+                  />
+                </div>
               </div>
 
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                  Email Address
-                </label>
-                <Input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="bg-slate-800 border-gray-600 text-white placeholder:text-gray-400 focus:border-primary"
-                  placeholder="Enter your email address"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+              <div className="group">
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-primary transition-colors">
                   Subject
                 </label>
                 <Input
@@ -114,38 +152,39 @@ export default function ContactSection() {
                   id="subject"
                   name="subject"
                   required
-                  className="bg-slate-800 border-gray-600 text-white placeholder:text-gray-400 focus:border-primary"
-                  placeholder="What's this about?"
+                  className="bg-slate-900/50 border-gray-700 text-white focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all duration-300 h-12"
+                  placeholder="Project Inquiry"
                 />
               </div>
 
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+              <div className="group">
+                <label htmlFor="message" className="block text-sm font-medium text-gray-400 mb-2 group-focus-within:text-primary transition-colors">
                   Message
                 </label>
                 <Textarea
                   id="message"
                   name="message"
                   required
-                  rows={5}
-                  className="bg-slate-800 border-gray-600 text-white placeholder:text-gray-400 focus:border-primary resize-none"
+                  rows={6}
+                  className="bg-slate-900/50 border-gray-700 text-white focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all duration-300 resize-none p-4"
                   placeholder="Tell me about your project..."
                 />
               </div>
 
               <Button
                 type="submit"
+                disabled={isSubmitting}
                 className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 disabled:opacity-50"
               >
-                  <div className="flex items-center gap-2">
-                    <span>Send Message</span>
-                    <i className="fas fa-paper-plane"></i>
-                  </div>
+                <div className="flex items-center gap-2">
+                  <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
+                  <i className="fas fa-paper-plane"></i>
+                </div>
               </Button>
             </form>
           </motion.div>
-          
-          
+
+
 
           {/* Contact Information */}
           <motion.div
@@ -157,7 +196,7 @@ export default function ContactSection() {
           >
             <div className="glass-morphism p-8 rounded-2xl">
               <h3 className="text-2xl font-bold text-gradient mb-6">Contact Information</h3>
-              
+
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <motion.a

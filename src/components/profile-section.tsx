@@ -51,53 +51,68 @@ export default function ProfileSection() {
           >
             <div>
               <h2 className="text-4xl md:text-5xl font-bold text-gradient mb-4">
-                Creative Developer
+                Frontend Developer
               </h2>
               <p className="text-xl text-gray-300 leading-relaxed">
-                Passionate about creating digital experiences that make a difference. 
-                I combine technical expertise with creative vision to build solutions 
-                that are both beautiful and functional.
+               Passionate about building responsive and user-friendly web interfaces. I combine clean code with modern design principles to create fast, accessible, and visually engaging digital experiences.
               </p>
             </div>
 
-            <div className="space-y-6">
-              <div className="glass-morphism p-6 rounded-xl">
+            <div className="space-y-8">
+              {/* Availability Badge */}
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/10 border border-green-500/20">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                </span>
+                <span className="text-sm font-medium text-green-400">Available for Work</span>
+              </div>
+
+              {/* Education Logic */}
+              <div className="glass-morphism p-6 rounded-xl relative overflow-hidden group hover:border-primary/40 transition-colors duration-300">
+                <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                  <i className="fas fa-graduation-cap text-6xl text-primary"></i>
+                </div>
                 <h3 className="text-xl font-semibold text-primary mb-3">Education</h3>
                 <p className="text-gray-300">
                   Bachelor of Science in Computer Science & Engineering
                   <br />
-                  <span className="text-gray-400">Focus on Software Development & Web Technologies</span>
+                  <span className="text-gray-400 text-sm">Focus on Software Development & Web Technologies</span>
                 </p>
               </div>
 
-              <div className="glass-morphism p-6 rounded-xl">
-                <h3 className="text-xl font-semibold text-primary mb-3">Specialization</h3>
-                <div className="flex flex-wrap gap-3">
-                  {[
-                    "Full-Stack Development",
-                    "UI/UX Design",
-                    "Mobile Development",
-                    "Database Design",
-                    "Cloud Computing"
-                  ].map((skill, index) => (
-                    <motion.span
-                      key={index}
-                      whileHover={{ scale: 1.05 }}
-                      className="px-3 py-1 bg-primary/20 text-primary rounded-full text-sm border border-primary/30"
-                    >
-                      {skill}
-                    </motion.span>
-                  ))}
+              {/* Tech Stack / Toolkit */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="glass-morphism p-4 rounded-xl hover:bg-primary/5 transition-colors duration-300">
+                  <h4 className="text-sm font-semibold text-neon-cyan mb-2">Frontend Arsenal</h4>
+                  <p className="text-xs text-gray-400">React, Next.js, TypeScript, Tailwind, Framer Motion, GSAP</p>
+                </div>
+                <div className="glass-morphism p-4 rounded-xl hover:bg-accent/5 transition-colors duration-300">
+                  <h4 className="text-sm font-semibold text-accent mb-2">Design Tools</h4>
+                  <p className="text-xs text-gray-400">Figma, Adobe XD, Photoshop, UI/UX Principles</p>
                 </div>
               </div>
 
-              <div className="glass-morphism p-6 rounded-xl">
-                <h3 className="text-xl font-semibold text-primary mb-3">Philosophy</h3>
-                <p className="text-gray-300 italic">
-                  "Code is poetry written in logic. Every line should be meaningful, 
-                  every function should have purpose, and every application should 
-                  tell a story that users want to be part of."
-                </p>
+              {/* Call to Actions */}
+              <div className="flex justify-center gap-4 pt-4 px-8">
+                 <motion.a
+                  href="/resume.pdf"
+                  download
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="px-6 py-2.5 bg-primary rounded-lg text-white font-medium flex items-center gap-2 shadow-lg shadow-primary/25 hover:shadow-primary/40 transition-shadow cursor-pointer"
+                >
+                  <i className="fas fa-download"></i> Download CV
+                </motion.a>
+                
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  className="px-6 py-2.5 border border-gray-600 rounded-lg text-gray-300 font-medium hover:border-white hover:text-white transition-colors"
+                >
+                  Contact Me
+                </motion.button>
               </div>
             </div>
           </motion.div>
