@@ -14,16 +14,104 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    id: 'vidionova',
+    title: 'VidioNova - AI-Powered Video Creation Platform',
+    description: 'The Fastest and Easiest Way to Generate Short Videos using AI-powered automation.',
+    fullDescription: `# VidioNova - AI-Powered Video Creation Platform
+
+### The Fastest and Easiest Way to Generate Short Videos
+Transform your ideas into engaging short videos with AI-powered automation. Perfect for social media content creators, marketers, and video enthusiasts.
+
+---
+
+## ✨ Features
+
+### 🎬 Core Video Creation
+- **AI Video Generation**: Turn text prompts into videos instantly
+- **Multiple Video Types**: Explainer, marketing, and social media videos
+- **Smart Templates**: Pre-built templates for quick creation
+- **Custom Backgrounds**: AI-generated and customizable
+
+### 🎨 Professional Tools
+- **Auto Captions**: Automatically generate captions
+- **AI Voice Narration**: Natural-sounding AI voice-over
+- **Background Music**: Extensive library of royalty-free music
+- **Visual Effects**: Professional effects and transitions
+- **Script Generator**: AI-powered script assistance
+
+### 📱 Social Media Optimization
+- **Instagram Reels** - Optimized vertical format
+- **TikTok Videos** - Trending effects and formats
+- **YouTube Shorts** - Perfect aspect ratio and duration
+- **Facebook Reels** - Platform-specific optimization
+
+### 🎯 User Experience
+- **Smooth Scroll Animations**: Professional Framer Motion animations
+- **Responsive Design**: Seamless experience across devices
+- **Intuitive Interface**: User-friendly controls
+- **Real-time Preview**: See your video as you create it
+
+---
+
+## 🛠️ Tech Stack
+
+- **React 19.1.0** - Modern UI library
+- **TypeScript 5.7** - Type-safe development
+- **Vite 6.3** - Lightning-fast build tool
+- **Tailwind CSS 4.1** - Utility-first CSS framework
+- **Framer Motion 12.29** - Production-ready animation library
+- **Lenis 1.3.17** - Smooth scroll library
+
+---
+
+## 🚀 Getting Started
+
+### Installation
+
+1. **Clone the repository**
+\`\`\`bash
+git clone https://github.com/sharmin2020331076/VidioNova.git
+cd VidioNova
+\`\`\`
+
+2. **Install dependencies**
+\`\`\`bash
+npm install
+\`\`\`
+
+3. **Start the development server**
+\`\`\`bash
+npm run dev
+\`\`\`
+
+---
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary Purple**: #C77DFF, #9D4EDD, #5A189A
+- **Accent Pink**: #ff03c0, #db0acd, #f163ce
+- **Background**: #35015e → Black gradient
+
+---
+
+**Made with ❤️ by the VidioNova Team**`,
+    image: '/vidionova.png',
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Framer Motion'],
+    githubUrl: 'https://github.com/sharmin2020331076/VidioNova',
+    liveUrl: 'https://vidio-nova.vercel.app/',
+    category: 'AI/Video',
+    featured: true
+  },
+  {
     id: 'notesnest',
     title: 'NotesNest',
     description: 'A beautiful, modern Progressive Web App for capturing notes and managing tasks.',
     fullDescription: `# NotesNest
 
-<div align="center">
-  <img src="\notenest.png" alt="NotesNest Logo" width="100" height="100" />
-  <h3>Your thoughts and tasks, perfectly organized</h3>
-  <p>A beautiful, modern Progressive Web App for capturing notes and managing tasks</p>
-</div>
+![NotesNest Logo](\notenest.png)
+### Your thoughts and tasks, perfectly organized
+A beautiful, modern Progressive Web App for capturing notes and managing tasks
 
 ## ✨ Features
 
@@ -362,10 +450,8 @@ Calendar view and list view for managing your tasks with priorities and categori
 
 ---
 
-<div align="center">
-  <p><strong>Built with ❤️ for your productivity</strong></p>
-  <p>100% Private • Offline First • Zero Setup</p>
-</div>`,
+**Built with ❤️ for your productivity**
+100% Private • Offline First • Zero Setup`,
     image: '/notenest.png',
     technologies: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'shadcn/ui'],
     githubUrl: 'https://github.com/sharmin2020331076/NoteNest',
